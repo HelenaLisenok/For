@@ -9,7 +9,7 @@ code {
     margin-bottom: 10px;
   }
   
-  .answer {
+  .answer, .answer1 {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     font-family: sans-serif;
