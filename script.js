@@ -204,17 +204,74 @@ function checkResult1() {
                     
                         }       
                 function checkResult22() {
-                  let arr9 = [];
-
-                  for (let i = 0; i <= 10; i=i+2) {
-                    arr9[i] = '-';
-                    i1 = String(i);
-                    arr9.push(i1);
-                    console.log(arr9[i]);
+                  let str = '-';
+                  for (let i = 1; i < 10; i++) {
+                    str += i;
+                    str += '-';
+                  } 
+                    console.log(str);
                   }
-                                 
-               
-                }                                
+
+                function checkResult23() {
+                    for (let i = 10; i <= 1000; i++) {
+                    let str = String(i); 
+                    console.log(str[0]);          
+                    }
+                }               
+                function checkResult24() {
+                  for (let i = 10; i <= 1000; i++) {
+                  let str = String(i); 
+                  console.log(Number(str[0])+Number(str[1]));          
+                  }
+              }  
+              function checkResult25() {
+                for (let i = 10; i <= 1000; i++) {
+                let str = String(i); 
+                if (str[0] == 1)
+                console.log(str); 
+                     
+                }
+            }          
+            
+            function checkResult26() {
+              let mas = [1, 3, 17, -2, 34, 20, -2];
+              sum = 0;
+              for (let i = 0; i<= mas.length-1; i++) {
+              if (mas[i] >= 0)
+              sum = sum+mas[i];
+              else break; 
+                    }
+              console.log(sum);
+          }    
+
+          function checkResult27() {
+            let sum = 0;
+            let i = 1;
+            for (i = 1; i<= 1000; i++) {
+              if (sum <= 100)
+             sum = sum + i;
+              
+              else break; }
+              console.log(sum);
+              console.log(i); 
+              
+        }    
+        
+        function checkResult28() {
+          let str = []
+            for (let i = 1; i <= 3; i++) {
+            for (let j = 1; j <= 3; j++) {
+              console.log(i);
+              console.log(j);
+              str = String(i)+String(j) + ' ';
+              console.log(str);
+            }
+          }
+          //console.log(str);
+            
+      }    
+          
+                                            
   window.onload = function () {
   let codeBox1 = document.getElementById('code1');
   codeBox1.innerHTML = checkResult1.toString();
