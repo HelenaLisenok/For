@@ -254,24 +254,117 @@ function checkResult1() {
               else break; }
               console.log(sum);
               console.log(i); 
-              
-        }    
+                 }    
         
         function checkResult28() {
-          let str = []
-            for (let i = 1; i <= 3; i++) {
-            for (let j = 1; j <= 3; j++) {
-              console.log(i);
-              console.log(j);
-              str = String(i)+String(j) + ' ';
-              console.log(str);
+          let str = '';
+              for (let i = 1; i <= 3; i++) {
+              for (let j = 1; j <= 3; j++) {
+               str += String(i)+String(j) + ' ';
+                //str += `${i}${j} `;
+                            }
             }
-          }
-          //console.log(str);
+            console.log(str);
+           }    
+           
+        function checkResult29() {
+          let mas = [1,8,30,-2,-5,22,40];
+          let masres = [];
+              for (let i = 0; i <= mas.length-1; i++) {
+              if (mas[i]>0) 
+               { masres.push(mas[i]);
+                }
+            }
+            console.log(masres);
+              }    
+          function checkResult30() {
+            let mas1 = [1,8,30,-2,-5,22,40];
             
-      }    
+              for (let i = 0; i <= mas1.length-1; i++) 
+              {mas1[i] = mas1[i]+10;
+                            
+            console.log(mas1[i]);}
+                  }    
+
+            function checkResult31() {
+              let objres = {};
+              let obj = {a: 1, b: 2, c: 3, d: 4, e: 5};
+              let keys = Object.keys(obj);
+              let val = Object.values(obj);
+              for (let i = 0; i <= Object.keys(obj).length-1; i++) {
+                objres[val[i]] = keys[i];
+              }
+              
+              console.log(objres);
+            
+            } 
+            
+            function checkResult32() 
+            {let value = document.getElementById('t10').value;
+            value = Number(value);
+            let flag = false;
+          for (let i=2;i<=value;i++){
+            if(value % i == 0 || value ==2) flag = true ;
+            break;
+          }
+          if (flag === true) {
+            console.log('число составное');
+          } else {
+            console.log('число простое');
+          }
           
-                                            
+        }
+
+       
+        function checkResult33()  {
+          let arr = [1, 2, 3, 2, 4, 3, 5, 6, 3, 2, 3];
+          let counter2 = 0;
+          let counter3 = 0;
+          for (let elem of arr) {
+            if (elem == 2) 
+              counter2++;
+            if (elem == 3)
+              counter3++;
+          }
+           console.log('Количество 2 = '+ counter2);
+          console.log('Количество 3 = '+ counter3);
+      }
+    
+      function checkResult34()  {
+        let str = "Hello world"
+        mas = [];
+        let count = {}
+        for (let i = 0; i <= str.length-1; i++) {
+          mas[i] = str[i]; 
+          }
+        for (let elem of mas) {
+          if (count[elem] === undefined) {
+            count[elem] = 1;
+          } else {
+            count[elem]++;
+          }
+        }
+         console.log(count);
+         console.log(mas);
+            }
+           
+        function checkResult35()  {
+        let mas = [2,3,4,-2,0,90];
+        let sum = 0;
+        for (let i = 1; i < mas.length-1; i++) {
+             sum = mas[i-1] + mas [i] + mas[i+1]; 
+             console.log(sum);
+                }
+               }           
+        function checkResult36() {
+        let arr = [10, 20, 30, 40, 21, 32, 51];
+        for (let i = 0; i < arr.length; i++) {
+        let str= String(arr[i]); 
+        if (str[0] == 1)
+          console.log(str); 
+              }
+            }                  
+                  
   window.onload = function () {
   let codeBox1 = document.getElementById('code1');
   codeBox1.innerHTML = checkResult1.toString();
